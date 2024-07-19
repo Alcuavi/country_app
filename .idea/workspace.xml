@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8bc4ac2c-6a28-47cf-a6ff-ff2d7c399c5b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/country/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/country/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -172,7 +173,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/ADMIN/Desktop/Prueba técnica AUREN/prueba_tecnica/country_app/public",
+    "last_opened_file_path": "C:/Users/ADMIN/Desktop/Prueba técnica AUREN/prueba_tecnica/country_app/src/Controller",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -183,11 +184,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ADMIN\Desktop\Prueba técnica AUREN\prueba_tecnica\country_app\src\Controller" />
       <recent name="C:\Users\ADMIN\Desktop\Prueba técnica AUREN\prueba_tecnica\country_app\public" />
       <recent name="C:\Users\ADMIN\Desktop\Prueba técnica AUREN\prueba_tecnica\country_app\src\Form" />
       <recent name="C:\Users\ADMIN\Desktop\Prueba técnica AUREN\prueba_tecnica\country_app\public\css" />
       <recent name="C:\Users\ADMIN\Desktop\Prueba técnica AUREN\prueba_tecnica\country_app\templates\country" />
-      <recent name="C:\Users\ADMIN\Desktop\Prueba técnica AUREN\prueba_tecnica\country_app\templates" />
     </key>
   </component>
   <component name="RunManager">
@@ -204,7 +205,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1721378407407</updated>
-      <workItem from="1721378408467" duration="6334000" />
+      <workItem from="1721378408467" duration="7033000" />
     </task>
     <servers />
   </component>

@@ -26,6 +26,7 @@ class LoadController extends AbstractController
 
         $content = $output->fetch();
 
-        return new Response("<pre>$content</pre>");
+        //return new Response("<pre>$content</pre>");
+        return $this->redirectToRoute('app_country_index');
     }
 }
