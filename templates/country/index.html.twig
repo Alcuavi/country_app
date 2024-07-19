@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Country index{% endblock %}
+
+{% block body %}
+    <h1>Country index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Code</th>
+                <th>Population</th>
+                <th>Flag</th>
+                <th>Region</th>
+                <th>Subregion</th>
+                <th>Capital</th>
+                <th>Area</th>
+                <th>Languages</th>
+                <th>Borders</th>
+                <th>NativeName</th>
+                <th>NumericCode</th>
+                <th>Currencies</th>
+                <th>Timezones</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for country in countries %}
+            <tr>
+                <td>{{ country.id }}</td>
+                <td>{{ country.name }}</td>
+                <td>{{ country.code }}</td>
+                <td>{{ country.population }}</td>
+                <td>{{ country.flag }}</td>
+                <td>{{ country.region }}</td>
+                <td>{{ country.subregion }}</td>
+                <td>{{ country.capital }}</td>
+                <td>{{ country.area }}</td>
+                <td>{{ country.languages ? country.languages|json_encode : '' }}</td>
+                <td>{{ country.borders ? country.borders|json_encode : '' }}</td>
+                <td>{{ country.nativeName }}</td>
+                <td>{{ country.numericCode }}</td>
+                <td>{{ country.currencies ? country.currencies|json_encode : '' }}</td>
+                <td>{{ country.timezones ? country.timezones|json_encode : '' }}</td>
+                <td>
+                    <a href="{{ path('app_country_show', {'id': country.id}) }}">show</a>
+                    <a href="{{ path('app_country_edit', {'id': country.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="16">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_country_new') }}">Create new</a>
+{% endblock %}

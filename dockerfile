@@ -36,6 +36,9 @@ ENV COMPOSER_ALLOW_SUPERUSER=1
 # Instala las dependencias de Composer
 RUN composer install
 
+# Instalar anotaciones
+RUN composer require annotations
+
 # Ajusta los permisos
 RUN chown -R www-data:www-data /var/www/html
 RUN chmod -R 775 /var/www/html
