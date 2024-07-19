@@ -1,18 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Country index{% endblock %}
-
 {% block body %}
-    <h1>Country index</h1>
-
-    <table class="table">
-        <thead>
+    <div class="container mt-4">
+        <h1 class="text-center">Country List</h1>
+        <a href="{{ path('app_country_new') }}" class="btn btn-success mb-3">Create new</a>
+        <table class="table table-striped table-bordered">
+            <thead class="thead-dark">
             <tr>
                 <th>Id</th>
                 <th>Name</th>
+                <th>Flag</th>
                 <th>Code</th>
                 <th>Population</th>
-                <th>Flag</th>
                 <th>Region</th>
                 <th>Subregion</th>
                 <th>Capital</th>
@@ -23,39 +22,49 @@
                 <th>NumericCode</th>
                 <th>Currencies</th>
                 <th>Timezones</th>
-                <th>actions</th>
+                <th>Actions</th>
             </tr>
-        </thead>
-        <tbody>
-        {% for country in countries %}
-            <tr>
-                <td>{{ country.id }}</td>
-                <td>{{ country.name }}</td>
-                <td>{{ country.code }}</td>
-                <td>{{ country.population }}</td>
-                <td>{{ country.flag }}</td>
-                <td>{{ country.region }}</td>
-                <td>{{ country.subregion }}</td>
-                <td>{{ country.capital }}</td>
-                <td>{{ country.area }}</td>
-                <td>{{ country.languages ? country.languages|json_encode : '' }}</td>
-                <td>{{ country.borders ? country.borders|json_encode : '' }}</td>
-                <td>{{ country.nativeName }}</td>
-                <td>{{ country.numericCode }}</td>
-                <td>{{ country.currencies ? country.currencies|json_encode : '' }}</td>
-                <td>{{ country.timezones ? country.timezones|json_encode : '' }}</td>
-                <td>
-                    <a href="{{ path('app_country_show', {'id': country.id}) }}">show</a>
-                    <a href="{{ path('app_country_edit', {'id': country.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="16">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('app_country_new') }}">Create new</a>
+            </thead>
+            <tbody>
+            {% for country in countries %}
+                <tr>
+                    <td>{{ country.id }}</td>
+                    <td>{{ country.name }}</td>
+                    <td><img src="{{ country.flag }}" alt="{{ country.name }} flag" width="50"></td>
+                    <td>{{ country.code }}</td>
+                    <td>{{ country.population }}</td>
+                    <td>{{ country.region }}</td>
+                    <td>{{ country.subregion }}</td>
+                    <td>{{ country.capital }}</td>
+                    <td>{{ country.area }}</td>
+                    <td>{{ country.languages | join(', ') }}</td>
+                    <td>{{ country.borders | join(', ') }}</td>
+                    <td>{{ country.nativeName }}</td>
+                    <td>{{ country.numericCode }}</td>
+                    <td>
+                        {% if country.currencies %}
+                            {% set currencyNames = [] %}
+                            {% for currency in country.currencies %}
+                                {% set currencyNames = currencyNames|merge([currency.name]) %}
+                            {% endfor %}
+                            {{ currencyNames | join(', ') }}
+                        {% else %}
+                            N/A
+                        {% endif %}
+                    </td>
+                    <td>{{ country.timezones | join(', ') }}</td>
+                    <td>
+                        <a href="{{ path('app_country_show', {'id': country.id}) }}" class="btn btn-info btn-sm">Show</a>
+                        <a href="{{ path('app_country_edit', {'id': country.id}) }}" class="btn btn-warning btn-sm">Edit</a>
+                        {{ include('country/_delete_form.html.twig') }}
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="16" class="text-center">No records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
 {% endblock %}

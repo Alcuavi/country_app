@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8bc4ac2c-6a28-47cf-a6ff-ff2d7c399c5b" name="Changes" comment="" />
+    <list default="true" id="8bc4ac2c-6a28-47cf-a6ff-ff2d7c399c5b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -147,6 +149,13 @@
       <path value="$PROJECT_DIR$/vendor/symfony/mime" />
       <path value="$PROJECT_DIR$/vendor/symfony/config" />
       <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
     </include_path>
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
@@ -163,7 +172,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/ADMIN/Desktop/Prueba técnica AUREN/prueba_tecnica/country_app",
+    "last_opened_file_path": "C:/Users/ADMIN/Desktop/Prueba técnica AUREN/prueba_tecnica/country_app/templates",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -174,6 +183,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ADMIN\Desktop\Prueba técnica AUREN\prueba_tecnica\country_app\templates" />
+      <recent name="C:\Users\ADMIN\Desktop\Prueba técnica AUREN\prueba_tecnica\country_app\src\Command" />
+      <recent name="C:\Users\ADMIN\Desktop\Prueba técnica AUREN\prueba_tecnica\country_app\src\Service" />
       <recent name="C:\Users\ADMIN\Desktop\Prueba técnica AUREN\prueba_tecnica\country_app" />
     </key>
   </component>
@@ -191,7 +203,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1721378407407</updated>
-      <workItem from="1721378408467" duration="4685000" />
+      <workItem from="1721378408467" duration="5112000" />
     </task>
     <servers />
   </component>

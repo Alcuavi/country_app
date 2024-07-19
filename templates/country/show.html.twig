@@ -1,12 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Country{% endblock %}
-
 {% block body %}
-    <h1>Country</h1>
-
-    <table class="table">
-        <tbody>
+    <div class="container mt-4">
+        <h1 class="text-center">Country Details</h1>
+        <table class="table table-bordered">
+            <tbody>
             <tr>
                 <th>Id</th>
                 <td>{{ country.id }}</td>
@@ -16,16 +14,16 @@
                 <td>{{ country.name }}</td>
             </tr>
             <tr>
+                <th>Flag</th>
+                <td><img src="{{ country.flag }}" alt="{{ country.name }} flag" width="100"></td>
+            </tr>
+            <tr>
                 <th>Code</th>
                 <td>{{ country.code }}</td>
             </tr>
             <tr>
                 <th>Population</th>
                 <td>{{ country.population }}</td>
-            </tr>
-            <tr>
-                <th>Flag</th>
-                <td>{{ country.flag }}</td>
             </tr>
             <tr>
                 <th>Region</th>
@@ -45,11 +43,11 @@
             </tr>
             <tr>
                 <th>Languages</th>
-                <td>{{ country.languages ? country.languages|json_encode : '' }}</td>
+                <td>{{ country.languages | join(', ') }}</td>
             </tr>
             <tr>
                 <th>Borders</th>
-                <td>{{ country.borders ? country.borders|json_encode : '' }}</td>
+                <td>{{ country.borders | join(', ') }}</td>
             </tr>
             <tr>
                 <th>NativeName</th>
@@ -61,18 +59,26 @@
             </tr>
             <tr>
                 <th>Currencies</th>
-                <td>{{ country.currencies ? country.currencies|json_encode : '' }}</td>
+                <td>
+                    {% if country.currencies %}
+                        {% set currencyNames = [] %}
+                        {% for currency in country.currencies %}
+                            {% set currencyNames = currencyNames|merge([currency.name]) %}
+                        {% endfor %}
+                        {{ currencyNames | join(', ') }}
+                    {% else %}
+                        N/A
+                    {% endif %}
+                </td>
             </tr>
             <tr>
                 <th>Timezones</th>
-                <td>{{ country.timezones ? country.timezones|json_encode : '' }}</td>
+                <td>{{ country.timezones | join(', ') }}</td>
             </tr>
-        </tbody>
-    </table>
-
-    <a href="{{ path('app_country_index') }}">back to list</a>
-
-    <a href="{{ path('app_country_edit', {'id': country.id}) }}">edit</a>
-
-    {{ include('country/_delete_form.html.twig') }}
+            </tbody>
+        </table>
+        <a href="{{ path('app_country_index') }}" class="btn btn-secondary">Back to list</a>
+        <a href="{{ path('app_country_edit', {'id': country.id}) }}" class="btn btn-warning">Edit</a>
+        {{ include('country/_delete_form.html.twig') }}
+    </div>
 {% endblock %}
