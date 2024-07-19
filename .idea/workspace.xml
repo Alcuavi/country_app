@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8bc4ac2c-6a28-47cf-a6ff-ff2d7c399c5b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/country/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/country/index.html.twig" afterDir="false" />
-    </list>
+    <list default="true" id="8bc4ac2c-6a28-47cf-a6ff-ff2d7c399c5b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -204,7 +202,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1721378407407</updated>
-      <workItem from="1721378408467" duration="5603000" />
+      <workItem from="1721378408467" duration="6005000" />
     </task>
     <servers />
   </component>
