@@ -13,6 +13,8 @@
 <div class="container-fluid">
     {% block body %}{% endblock %}
 </div>
-{% block javascripts %}{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('js/delete-multiple.js') }}"></script>
+{% endblock %}
 </body>
 </html>
