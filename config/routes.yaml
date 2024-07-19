@@ -3,6 +3,11 @@ app_country_index:
     controller: App\Controller\CountryController::index
     methods: ['GET']
 
+app_country_load:
+    path: /load-countries
+    controller: App\Controller\LoadController::loadCountries
+    methods: ['GET']
+
 controllers:
     resource: ../src/Controller/
     type: annotation
