@@ -37,7 +37,7 @@ ENV COMPOSER_ALLOW_SUPERUSER=1
 RUN composer install
 
 # Instalar anotaciones
-RUN composer require annotations
+RUN composer require annotations guzzlehttp/guzzle
 
 # Ajusta los permisos
 RUN chown -R www-data:www-data /var/www/html
